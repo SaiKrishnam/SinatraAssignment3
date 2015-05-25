@@ -1,0 +1,8 @@
+h1= @song.firstName + @song.lastName
+p Date Of Birth: #{@song.released_on.strftime("%e %B %Y") if @song.released_on}
+p Nickname: #{@song.nickName}
+p <a href="/student">back to students index</a>
+p <a href="/student/#{@song.id}/edit">edit student details</a>
+form action="/student/#{@song.id}" method="POST"
+  input type="hidden" name="_method" value="DELETE"
+  input type="submit" value="delete this student"

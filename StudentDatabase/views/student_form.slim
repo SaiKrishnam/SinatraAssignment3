@@ -1,0 +1,15 @@
+label for="firstName" FirstName:
+input#firstName type="text" name="song[firstName]" value="#{@song.firstName}"
+
+label for="lastName" LastName:
+input#lastName type="text" name="song[lastName]" value="#{@song.lastName}"
+
+label for="released_on" Date of Birth(mm/dd/yyyy):
+input#released_on type="text" name="song[released_on]" value="#{@song.released_on.strftime("%m/%d/%Y") if
+ @song.released_on}"
+ 
+label for="nickName" NickName:
+textarea#nickName name="song[nickName]" == @song.nickName
+
+input type="submit" value="Save Student"
+

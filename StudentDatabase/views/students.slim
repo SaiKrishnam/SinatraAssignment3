@@ -1,0 +1,8 @@
+h1 Students
+a href="/student/new" Add new Students
+- if @songs.any?
+  ul#songs
+    -@songs.each do |song|
+      li <a href="/student/#{song.id}">#{song.firstName}</a>
+- else
+  p No songs have been created yet!
